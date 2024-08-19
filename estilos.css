@@ -1,0 +1,783 @@
+/* Estilos Generales */
+body {
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilos del Navbar */
+.navbar {
+    font-family: "Kanit", sans-serif;
+    font-weight: 100;
+    background-color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.icon img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+.btn-publicar {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-publicar:hover {
+    background-color: #f80505;
+}
+
+/* Estilos de la Sección Hero */
+.hero {
+    height: 500px;
+    background-size: 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-texto {
+    background-color: rgba(230, 3, 3, 0.758);
+    color: #ffffff;
+    font-family: "Bowlby One SC", sans-serif;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Estilos de la Sección de Tarjetas */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 60px;
+    max-width: 1600px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.tarjeta {
+    perspective: 1000px;
+}
+
+.tarjeta-contenido {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.tarjeta:hover .tarjeta-contenido {
+    transform: rotateY(180deg);
+}
+
+.tarjeta-frontal,
+.tarjeta-reverso {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.tarjeta-frontal {
+    background-color: #ffffff;
+}
+
+.tarjeta-frontal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tarjeta-reverso {
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.tarjeta-reverso h2 {
+    font-size: 15px;
+    margin: 0 0 10px;
+    font-family: "Angkor", serif;
+}
+
+.tarjeta-reverso p {
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+    font-family: "Libre Baskerville", serif;
+}
+
+/* Estilos de la Sección de Texto Centrado */
+.texto-centrado {
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #00000098;
+}
+
+.texto-centrado2 {
+    max-width: 700px;
+    margin: 30px auto;
+    font-family: "Bowlby One SC", sans-serif;
+    font-size: 35px;
+    color: #000000;
+}
+
+/* Estilos del Footer */
+.footer {
+    background-color: #cf1919b9;
+    color: #fff;
+    padding: 1px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-nav,
+.footer-social,
+.footer-contact {
+    margin: -15px;
+    max-width: 2000px;
+}
+
+.footer-nav h3,
+.footer-social h3,
+.footer-contact h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-nav li {
+    margin: 1px 0;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-social a {
+    margin: 0 10px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-copy {
+    margin-top: 15px;
+    color: white;
+}
+
+.footer-copy p {
+    font-size: 15px;
+}
+
+/* Estilos del Formulario de Publicación */
+.announcement-text {
+    font-size: 1.5em;
+    color: #000000;
+    margin: 20px 0;
+    font-family: "Sigmar One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.timeline-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.timeline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.timeline-icon {
+    font-size: 2em;
+    color: #007bff;
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.timeline-text {
+    color: #343a40;
+    font-weight: 500;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #007bff;
+    z-index: -1;
+}
+
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.form-container {
+    width: 50%;
+    max-width: 650px;
+    font-family: "Libre Baskerville", serif;
+}
+
+.form-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.form-box:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #343a40;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    color: #495057;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.message-container {
+    margin-top: 10px;
+}
+
+.submit-message,
+.error-message,
+.message {
+    font-size: 1em;
+    text-align: center;
+}
+
+.submit-message {
+    color: #28a745;
+}
+
+.error-message {
+    color: #dc3545;
+}
+
+.message {
+    color: #28a745;
+}
+
+/* Sección de Carga de Fotos */
+.form-photo-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.form-photo-upload:hover {
+    background-color: #f0f8ff;
+}
+
+.icon-camera {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.upload-text {
+    font-size: 1.2em;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.upload-message {
+    font-size: 0.9em;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 0;
+}
+
+/* Estilos para Página de Error 404 */
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.error-image {
+    max-width: 200px;
+    width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: -100px;
+}
+
+.error-message {
+    font-size: 2.5em;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.error-subtext {
+    font-size: 1.2em;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+/* Estilos generales del contenedor */
+.photo-upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilos del formulario */
+#photo-upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilos de la etiqueta que envuelve el contenido */
+.photo-upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Estilos del contenido de carga */
+.photo-upload-content {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* Estilos del ícono de la cámara */
+.photo-icon {
+    font-size: 40px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* Estilos del texto principal */
+.photo-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Estilos del texto secundario */
+.photo-subtext {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Estilos del contenedor del botón */
+.botonf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    /* Ajusta la altura según sea necesario */
+    margin-top: 20px;
+    /* Ajusta el margen superior si es necesario */
+}
+
+/* Estilos del botón */
+.botonf button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    /* Opcional: hace que el texto esté en mayúsculas */
+    transition: background-color 0.3s ease;
+    /* Opcional: efecto de transición en el color de fondo */
+}
+
+.botonf button:hover {
+    background-color: #333;
+    /* Opcional: cambio de color al pasar el ratón por encima */
+}
+
+/* Contenedor de vista previa */
+.image-preview-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Envoltura de la imagen y botón de eliminación */
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo de las imágenes */
+.image-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Estilo del botón de eliminación */
+.remove-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.remove-button:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+/* seccion de anunciantes targetas */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    /* Espaciado entre tarjetas */
+    padding: 1rem;
+}
+
+/* Estilos generales para las tarjetas */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: calc(25% - 1rem);
+    /* 4 tarjetas por fila, ajusta según el espaciado */
+    max-width: 300px;
+    /* Máximo ancho para que las tarjetas no se expandan demasiado */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.card-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+/* Botones de contacto */
+.card-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.contact-button.phone {
+    background-color: #ffffff;
+}
+
+.contact-button.whatsapp {
+    background-color: #ffffff;
+}
+
+.contact-button img {
+    width: 24px;
+    /* Ajusta el tamaño según sea necesario */
+    height: 24px;
+    /* Mantén la proporción con el ancho */
+    vertical-align: middle;
+    /* Alinea verticalmente */
+}
+
+.contact-button:hover {
+    opacity: 0.8;
+}
+
+/* Botón de 'Ver Más' */
+.card-more {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.card-more:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para tarjetas premium */
+.premium {
+    border: 2px solid gold;
+}
+
+.premium-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: gold;
+    color: #fff;
+    padding: 0.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+
+.search-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.category-filter {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.location-text {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}

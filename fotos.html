@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rellena este formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Angkor&family=Autour+One&family=Bowlby+One+SC&family=Bungee+Tint&family=Chau+Philomene+One:ital@0;1&family=Chelsea+Market&family=Comfortaa&family=Dancing+Script:wght@400..700&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Grey+Qo&family=Hepta+Slab:wght@1..900&family=Jersey+15&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lilita+One&family=Matemasie&family=Mrs+Sheppards&family=Neonderthaw&family=Oswald:wght@200..700&family=Pacifico&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Sigmar+One&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">TuLogo</a>
+                </div>
+
+                <!-- Iconos -->
+                <div class="icons">
+                    <!-- User Icon -->
+                    <a href="#" class="icon">
+                        <img src="img/user.png" alt="Usuario">
+                    </a>
+
+                    <!-- boton -->
+
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Formulario de publicar anuncio -->
+    <div class="announcement-text">
+        ¡Publica gratis siguiendo unos pocos pasos!
+    </div>
+    <div class="timeline-container">
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">🔍</div>
+                <div class="timeline-text">Información</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">📷</div>
+                <div class="timeline-text">Fotos</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">👁️</div>
+                <div class="timeline-text">Visibilidad</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">✔️</div>
+                <div class="timeline-text">Confirmar</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="photo-upload-container">
+        <form id="photo-upload-form">
+            <label for="photo-upload" class="photo-upload-label">
+                <div class="photo-upload-content">
+                    <div class="photo-icon">📷</div>
+                    <div class="photo-text">Puedes cargar hasta 10 imágenes</div>
+                    <div class="photo-subtext">Arrastra la foto hasta aquí o haz click para seleccionarla</div>
+                </div>
+            </label>
+            <input type="file" id="photo-upload" name="photos" multiple accept="image/*" hidden>
+        </form>
+    </div>
+
+    <div id="image-preview-container" class="image-preview-container"></div>
+
+
+    <div class="botonf">
+        <a href="#"></a>
+        <button>Continuar</button>
+
+    </div>
+    <!-- otra botton -->
+    <!-- otra seccion -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Sección de Navegación -->
+            <div class="footer-nav">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </div>
+
+            <!-- Sección de Redes Sociales -->
+            <div class="footer-social">
+                <h3>Redes Sociales</h3>
+                <a href="#"><img src="img/insta.png" alt="Instagram" class="social-icon"></a>
+                <a href="#"><img src="img/face.png" alt="Facebook" class="social-icon"></a>
+            </div>
+
+            <!-- Sección de Contacto -->
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p>Dirección: Calle Falsa 123, Ciudad, País</p>
+                <p>Teléfono: (123) 456-7890</p>
+                <p>Email: admin@asapscort.com</p>
+            </div>
+        </div>
+
+        <div class="footer-copy">
+            <p>&copy; 2024 AsapEscort. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
